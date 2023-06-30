@@ -1,0 +1,87 @@
+import React, { useEffect } from "react";
+import axios from "axios";
+import "./Navigation.css";
+const Navigation = () => {
+    useEffect(() => {
+        function handleKeyDown(e) {
+            if (e.keyCode === 38) {
+                // up arrow
+                document.getElementById("up").click();
+            } else if (e.keyCode === 39) {
+                // right arrow
+                document.getElementById("right").click();
+            } else if (e.keyCode === 40) {
+                // down arrow
+                document.getElementById("down").click();
+            } else if (e.keyCode === 37) {
+                // left arrow
+                document.getElementById("left").click();
+            } else if (e.keyCode === 13) {
+                // enter
+                document.getElementById("select").click();
+            } else if (e.keyCode == 8 || e.keyCode == 27) {
+                // backspace or escape
+                document.getElementById("back").click();
+            } else if (e.keyCode == 17) {
+                // left ctrl
+                document.getElementById("info").click();
+            } else if (e.keyCode == 36) {
+                // home key
+                document.getElementById("home").click();
+            } else if (e.keyCode == 32) {
+                // space
+                document.getElementById("play").click();
+            }
+            console.log(e.keyCode);
+            // 8 - backspace
+            // 13 - Enter
+        }
+        document.addEventListener("keydown", handleKeyDown);
+    }, []);
+
+    const handleControl = async (e) => {
+        e.preventDefault();
+        try {
+            const res = await axios.post(`/keypress/${e.target.id}`);
+        } catch (e) {
+            alert(e);
+        }
+    };
+
+    return (
+        <div className="wrapper">
+            <button id="up" onClick={handleControl}>
+                up
+            </button>
+            <button id="right" onClick={handleControl}>
+                right
+            </button>
+            <button id="down" onClick={handleControl}>
+                down
+            </button>
+            <button id="left" onClick={handleControl}>
+                left
+            </button>
+            <button id="home" onClick={handleControl}>
+                home
+            </button>
+            <button id="enter" onClick={handleControl}>
+                enter
+            </button>
+            <button id="select" onClick={handleControl}>
+                select
+            </button>
+            <button id="back" onClick={handleControl}>
+                back
+            </button>
+            <button id="info" onClick={handleControl}>
+                info
+            </button>
+            <button id="play" onClick={handleControl}>
+                play
+            </button>
+        </div>
+    );
+};
+
+export default Navigation;
