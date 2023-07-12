@@ -1,0 +1,65 @@
+div#dpad-container {
+    width: 200px;
+    height: 200px;
+    display: grid;
+    grid: 66px 66px 66px / 66px 66px 66px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    place-items: center center;
+}
+
+button#left {
+    width: 50px;
+    height: 50px;
+    grid-row-start: 2;
+    grid-column-start: 1;
+}
+
+button#up {
+    width: 50px;
+    height: 50px;
+    grid-row-start: 1;
+    grid-column-start: 2;
+}
+
+button#down {
+    width: 50px;
+    height: 50px;
+    grid-row-start: 3;
+    grid-column-start: 2;
+}
+
+button#right {
+    width: 50px;
+    height: 50px;
+    grid-row-start: 2;
+    grid-column-start: 3;
+}
+
+.container {
+    width: 200px;
+    background-color: black;
+    padding-bottom: 5px;
+}
+
+button {
+    width: 42%;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    margin: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+button:hover {
+    border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}

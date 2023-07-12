@@ -50,36 +50,40 @@ const Navigation = () => {
 
     return (
         <div className="wrapper">
-            <button id="up" onClick={handleControl}>
-                up
-            </button>
-            <button id="right" onClick={handleControl}>
-                right
-            </button>
-            <button id="down" onClick={handleControl}>
-                down
-            </button>
-            <button id="left" onClick={handleControl}>
-                left
-            </button>
-            <button id="home" onClick={handleControl}>
-                home
-            </button>
-            <button id="enter" onClick={handleControl}>
-                enter
-            </button>
-            <button id="select" onClick={handleControl}>
-                select
-            </button>
-            <button id="back" onClick={handleControl}>
-                back
-            </button>
-            <button id="info" onClick={handleControl}>
-                info
-            </button>
-            <button id="play" onClick={handleControl}>
-                play
-            </button>
+            <div id="dpad-container">
+                <button id="left" onClick={handleControl}>
+                    L
+                </button>
+                <button id="up" onClick={handleControl}>
+                    U
+                </button>
+                <button id="down" onClick={handleControl}>
+                    D
+                </button>
+                <button id="right" onClick={handleControl}>
+                    R
+                </button>
+            </div>
+            <div className="container">
+                <button id="home" onClick={handleControl}>
+                    home
+                </button>
+                <button id="enter" onClick={handleControl}>
+                    enter
+                </button>
+                <button id="select" onClick={handleControl}>
+                    select
+                </button>
+                <button id="back" onClick={handleControl}>
+                    back
+                </button>
+                <button id="info" onClick={handleControl}>
+                    info
+                </button>
+                <button id="play" onClick={handleControl}>
+                    play
+                </button>
+            </div>
         </div>
     );
 };
