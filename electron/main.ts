@@ -25,12 +25,11 @@ function createWindow() {
         width: 232,
         height: 397,
         resizable: false,
-        icon: path.join(process.env.PUBLIC, "electron-vite.svg"),
+        icon: path.join(process.env.PUBLIC, "remote-control.png"),
         webPreferences: {
             preload: path.join(__dirname, "preload.js"),
         },
     });
-
     // Test active push message to Renderer-process.
     win.webContents.on("did-finish-load", () => {
         win?.webContents.send(
