@@ -7,7 +7,8 @@ Inspiration for this project was my Roku remote breaking.
 - Simple UI
 - Control with arrow keys
 
-![image](https://github.com/gaspernovak/roku-remote/assets/36790111/c7896c94-6796-4244-805b-881a6e670c35)
+![image](https://github.com/gaspernovak/roku-remote/assets/36790111/8c29964d-66c5-4869-9fc1-9ee48038bba8)
+
 
 ## Contributing
 Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
