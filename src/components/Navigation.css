@@ -7,6 +7,9 @@ div#dpad-container {
     margin-right: auto;
     background-color: black;
     place-items: center center;
+
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 button#left {
@@ -41,6 +44,8 @@ button#right {
     width: 200px;
     background-color: black;
     padding-bottom: 5px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 button {
@@ -56,6 +61,7 @@ button {
     cursor: pointer;
     transition: border-color 0.25s;
 }
+
 button:hover {
     border-color: #646cff;
 }
